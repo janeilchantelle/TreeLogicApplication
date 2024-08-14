@@ -24,7 +24,7 @@ public class TreeController {
 
     @GetMapping("/enter-numbers")
     public String showInputForm() {
-        return "input-form"; // Return the name of the HTML file without the .html extension
+        return "input-form";
     }
 
     @PostMapping("/process-numbers")

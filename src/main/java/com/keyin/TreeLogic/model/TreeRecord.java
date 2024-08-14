@@ -15,7 +15,6 @@ public class TreeRecord {
     @Lob
     private String treeJson;
 
-    // Getters and setters
     public Long getId() {
         return id;
     }

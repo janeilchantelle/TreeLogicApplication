@@ -1,14 +1,10 @@
-// view-trees.js
-
 document.addEventListener("DOMContentLoaded", async () => {
     const treeListContainer = document.getElementById("tree-list");
     const loadingMessage = document.getElementById("loading-message");
     const errorMessage = document.getElementById("error-message");
 
-    // Show loading message
     loadingMessage.style.display = "block";
 
-    // Fetch the list of trees
     try {
         const response = await fetch("/previous-trees");
         if (!response.ok) {
@@ -45,7 +41,7 @@ async function fetchAndDisplayTree(treeId) {
     try {
         const response = await fetch(`/get-tree?id=${treeId}`);
         if (!response.ok) {
-            throw new Error("Network response was not ok.");
+            throw new Error("Error fetching data.");
         }
 
         const treeJson = await response.json();

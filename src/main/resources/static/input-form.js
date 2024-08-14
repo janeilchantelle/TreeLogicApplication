@@ -1,11 +1,9 @@
-// input-form.js
-
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("number-form");
     const treeResultContainer = document.getElementById("tree-result-container");
 
     form.addEventListener("submit", async (event) => {
-        event.preventDefault(); // Prevent form from submitting normally
+        event.preventDefault();
 
         const numbersInput = document.getElementById("numbers");
         const numbers = numbersInput.value.trim();
@@ -31,19 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function displayTree(treeJson) {
-        // Clear previous result
         treeResultContainer.innerHTML = "";
 
-        // Create a new container for the tree result
         const treeContainer = document.createElement("div");
         treeContainer.className = "tree-result";
 
-        // Add the tree JSON to the container
         const pre = document.createElement("pre");
         pre.textContent = JSON.stringify(treeJson, null, 2);
         treeContainer.appendChild(pre);
 
-        // Add the container to the result section
         treeResultContainer.appendChild(treeContainer);
     }
 });
