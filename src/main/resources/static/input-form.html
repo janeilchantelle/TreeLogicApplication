@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Petit+Formal+Script&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <title>Enter Numbers - TreeLogic</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>TreeLogic</h1>
+        <h1>Welcome to TreeLogic</h1>
     </header>
     <main>
-        <h2>Enter Numbers</h2>
+        <h3>Enter Numbers below to create a binary tree.</h3>
         <form id="number-form">
-            <label for="numbers">Enter numbers (comma-separated):</label>
+            <label for="numbers">(comma-separated):</label>
             <input type="text" id="numbers" name="numbers" required>
-            <button type="submit">Submit</button>
+            <button type="submit">Generate Tree</button>
         </form>
         <div id="tree-result-container">
         </div>
-        <a href="view-trees.html" class="link">View Previous Trees</a>
+        <a href="view-trees.html" class="link">View Previous Trees in Database</a>
     </main>
 </div>
 <script src="input-form.js" defer></script>
